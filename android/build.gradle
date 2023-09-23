@@ -11,14 +11,14 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.1'
+        classpath 'com.android.tools.build:gradle:8.0.0'
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    namespace com.baumblatt.capacitor.firebase.auth
+    namespace "com.baumblatt.capacitor.firebase.auth"
     compileSdkVersion project.hasProperty('compileSdkVersion') ? rootProject.ext.compileSdkVersion : 33
     defaultConfig {
         minSdkVersion project.hasProperty('minSdkVersion') ? rootProject.ext.minSdkVersion : 21
