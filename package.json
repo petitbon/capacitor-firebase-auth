@@ -1,11 +1,11 @@
 {
 	"name": "capacitor-firebase-auth",
-	"version": "3.1.2-rc.5",
+	"version": "3.1.2-rc.6",
 	"description": "Capacitor plugin for Firebase Authentication",
 	"main": "dist/esm/index.js",
 	"types": "dist/esm/index.d.ts",
 	"scripts": {
-		"build": "npm run clean && tsc --project tsconfig.json",
+		"build": "npm run clean",
 		"pack": "npm pack && mv capacitor-firebase-auth-3.*.tgz capacitor-firebase-auth-nightly.tgz",
 		"clean": "rimraf ./dist",
 		"watch": "tsc --watch",
@@ -20,11 +20,10 @@
 	"devDependencies": {
 		"@capacitor/android": "latest",
 		"@capacitor/ios": "latest",
-		"rimraf": "^3.0.0",
-		"typescript": "^3.9.5 || ^4.3.5"
+		"rimraf": "^3.0.0"
 	},
 	"peerDependencies": {
-		"firebase": "^9.10.0",
+		"firebase": "^10.0.0",
 		"rxjs": "~6.6.7"
 	},
 	"files": [
