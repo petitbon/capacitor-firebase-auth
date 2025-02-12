@@ -6,7 +6,7 @@ export const phoneSignInWeb: (options: { providerId: string, data?: SignInOption
     = async (options) => {
         useDeviceLanguage(getAuth());
         const code = options.data?.verificationCode as string;
-        const verifier = new RecaptchaVerifier(options.data?.container, null, getAuth());
+        const verifier = new RecaptchaVerifier(getAuth(), options.data?.container, null);
         const userCredential = await signInWithPhoneNumber(getAuth(), options.data?.phone as string, verifier);
         const confirmation = await userCredential.confirm(code);
         const idToken = await confirmation.user?.getIdToken()
