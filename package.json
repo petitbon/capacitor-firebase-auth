@@ -1,58 +1,64 @@
 {
-	"name": "capacitor-firebase-auth",
-	"version": "3.1.2-rc.9",
-	"description": "Capacitor plugin for Firebase Authentication",
-	"main": "dist/esm/index.js",
-	"types": "dist/esm/index.d.ts",
-	"scripts": {
-		"build": "npm run clean && tsc --project tsconfig.json",
-		"pack": "npm pack && mv capacitor-firebase-auth-3.*.tgz capacitor-firebase-auth-nightly.tgz",
-		"clean": "rimraf ./dist",
-		"watch": "tsc --watch",
-		"prepublishOnly": "npm run build",
-		"prepare": "npm run build"
-	},
-	"author": "Bernardo Baumblatt",
-	"license": "MIT",
-	"dependencies": {
-		"@capacitor/core": "latest",
-		"rxjs": "~6.6.7"
-	},
-	"devDependencies": {
-		"@capacitor/android": "latest",
-		"@capacitor/ios": "latest",
-		"rimraf": "^3.0.0",
-		"typescript": "^3.9.5 || ^4.0.0"
-	},
-	"peerDependencies": {
-		"firebase": "^10.0.0",
-		"rxjs": "~6.6.7"
-	},
-	"files": [
-		"alternative/",
-		"dist/",
-		"ios/",
-		"android/",
-		"CapacitorFirebaseAuth.podspec"
-	],
-	"keywords": [
-		"capacitor",
-		"plugin",
-		"native"
-	],
-	"capacitor": {
-		"ios": {
-			"src": "ios"
-		},
-		"android": {
-			"src": "android"
-		}
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/baumblatt/capacitor-firebase-auth.git"
-	},
-	"bugs": {
-		"url": "https://github.com/baumblatt/capacitor-firebase-auth.git/issues"
-	}
+  "name": "capacitor-firebase-auth",
+  "version": "3.1.2-rc.9",
+  "description": "Capacitor plugin for Firebase Authentication",
+  "main": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/esm/index.js"
+    }
+  },
+  "scripts": {
+    "build": "npm run clean && tsc --project tsconfig.json",
+    "pack": "npm pack && mv capacitor-firebase-auth-3.*.tgz capacitor-firebase-auth-nightly.tgz",
+    "clean": "rimraf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
+  },
+  "author": "Bernardo Baumblatt",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/core": "latest",
+    "rxjs": "~6.6.7"
+  },
+  "devDependencies": {
+    "@capacitor/android": "latest",
+    "@capacitor/ios": "latest",
+    "rimraf": "^3.0.0",
+    "typescript": "^3.9.5 || ^4.0.0"
+  },
+  "peerDependencies": {
+    "firebase": "^10.0.0",
+    "rxjs": "~6.6.7"
+  },
+  "files": [
+    "alternative/",
+    "dist/",
+    "ios/",
+    "android/",
+    "CapacitorFirebaseAuth.podspec"
+  ],
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native"
+  ],
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baumblatt/capacitor-firebase-auth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/baumblatt/capacitor-firebase-auth.git/issues"
+  }
 }
